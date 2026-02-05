@@ -1,43 +1,48 @@
 # Ice Feshing Rescue Training
 
-Interactive ice rescue training simulator for iOS. Teaches life-saving skills for ice emergencies.
+## App Store Information
 
-## App Store
-
-**Subtitle:** Learn Ice Safety Skills
-
-**Description:**
-Ice Feshing Rescue Training is a comprehensive simulator that teaches you how to survive and respond to ice emergencies. Every winter, people fall through frozen lakes and rivers. This app teaches you the critical skills that could save your life or help you rescue others.
-
-Features:
-- Learn ice safety fundamentals with 6 detailed lessons
-- Practice 8 realistic emergency scenarios
-- Test your knowledge with randomized quizzes
-- Quick-access emergency reference guide
-- Track your progress and skill level
-- Works completely offline
-
-Topics covered:
-- How to assess ice thickness and safety
-- Self-rescue techniques if you fall through
-- How to safely help others in ice emergencies
-- Essential safety equipment
-- Hypothermia recognition and first aid
-
-**Promotional Text:**
-Be prepared for ice emergencies. Learn skills that save lives.
-
-**Keywords:**
-ice safety, rescue training, winter safety, ice fishing, hypothermia, emergency response, first aid, survival skills, ice rescue, safety training
-
-**Category:**
+### Category
 Education
 
-## Technical Details
+### Subtitle
+Learn Ice Safety Skills
 
-- iOS 15.6+
-- iPhone and iPad
-- Portrait and landscape orientations
-- Local data storage only
-- No network required
-- Custom UI components (no SF Symbols)
+### Promotional Text
+Be prepared for ice emergencies. Learn skills that save lives with our interactive rescue training simulator.
+
+### Description
+Ice Feshing Rescue Training is a comprehensive simulator that teaches you how to survive and respond to ice emergencies. Every winter, people fall through frozen lakes and rivers. This app teaches you the critical skills that could save your life or help you rescue others.
+
+**Learn Ice Safety:**
+Master 6 detailed lessons covering all aspects of ice safety:
+• Assessing ice thickness and safety
+• Self-rescue techniques if you fall through
+• How to safely help others in ice emergencies
+• Essential safety equipment knowledge
+• Hypothermia recognition and first aid
+• Prevention and preparation strategies
+
+**Practice Scenarios:**
+Train with 8 realistic emergency simulations:
+• Falling through thin ice
+• Rescuing someone who has fallen through
+• Group ice crossing safety
+• Equipment failure situations
+• Cold water survival techniques
+• Hypothermia response protocols
+
+**Key Features:**
+• Interactive scenario-based training
+• Randomized knowledge quizzes
+• Quick-access emergency reference guide
+• Track your progress and skill level
+• Knowledge base with safety information
+• Equipment checklist for preparation
+• Beautiful, easy-to-read interface
+• Works completely offline
+
+Be ready when it matters most. Practice life-saving skills today!
+
+### Keywords
+ice safety,rescue training,winter safety,ice fishing,hypothermia,emergency response,first aid,survival skills,ice rescue,safety training
