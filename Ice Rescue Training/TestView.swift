@@ -226,7 +226,7 @@ struct TestQuestionView: View {
                 }
             }
             .padding()
-            .background(Theme.backgroundDark)
+            .padding(.bottom, 20)
         }
         .background(Theme.backgroundGradient.ignoresSafeArea())
     }

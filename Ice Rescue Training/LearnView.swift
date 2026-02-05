@@ -188,10 +188,6 @@ struct LessonDetailView: View {
             }
             .padding()
             .padding(.bottom, 20)
-            .background(
-                Theme.backgroundGradient
-                    .ignoresSafeArea(edges: .bottom)
-            )
         }
         .background(Theme.backgroundGradient.ignoresSafeArea())
     }
