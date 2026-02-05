@@ -11,7 +11,7 @@ struct HomeView: View {
                 VStack(spacing: 8) {
                     SnowflakeIcon(size: 48, color: Theme.iceBlue)
                     
-                    Text("Ice Rescue Training")
+                    Text("Ice Feshing Rescue Training")
                         .font(Theme.titleFont())
                         .foregroundColor(Theme.textPrimary)
                     

@@ -1,4 +1,4 @@
-# Ice Rescue Training
+# Ice Feshing Rescue Training
 
 Interactive ice rescue training simulator for iOS. Teaches life-saving skills for ice emergencies.
 
@@ -7,7 +7,7 @@ Interactive ice rescue training simulator for iOS. Teaches life-saving skills fo
 **Subtitle:** Learn Ice Safety Skills
 
 **Description:**
-Ice Rescue Training is a comprehensive simulator that teaches you how to survive and respond to ice emergencies. Every winter, people fall through frozen lakes and rivers. This app teaches you the critical skills that could save your life or help you rescue others.
+Ice Feshing Rescue Training is a comprehensive simulator that teaches you how to survive and respond to ice emergencies. Every winter, people fall through frozen lakes and rivers. This app teaches you the critical skills that could save your life or help you rescue others.
 
 Features:
 - Learn ice safety fundamentals with 6 detailed lessons
