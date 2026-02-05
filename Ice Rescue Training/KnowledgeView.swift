@@ -220,19 +220,7 @@ struct ArticleDetailView: View {
                                 .font(Theme.captionFont())
                                 .foregroundColor(Theme.textMuted)
                             
-                            FlowLayout(spacing: 8) {
-                                ForEach(article.tags, id: \.self) { tag in
-                                    Text(tag)
-                                        .font(Theme.smallFont())
-                                        .foregroundColor(Theme.iceBlue)
-                                        .padding(.horizontal, 10)
-                                        .padding(.vertical, 5)
-                                        .background(
-                                            Capsule()
-                                                .stroke(Theme.iceBlue.opacity(0.5), lineWidth: 1)
-                                        )
-                                }
-                            }
+                            TagsView(tags: article.tags)
                         }
                         .padding(.top, 8)
                     }
@@ -247,42 +235,47 @@ struct ArticleDetailView: View {
     }
 }
 
-struct FlowLayout: Layout {
-    var spacing: CGFloat = 8
+// iOS 15 compatible tags view
+struct TagsView: View {
+    let tags: [String]
     
-    func sizeThatFits(proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) -> CGSize {
-        let result = arrange(proposal: proposal, subviews: subviews)
-        return result.size
-    }
-    
-    func placeSubviews(in bounds: CGRect, proposal: ProposedViewSize, subviews: Subviews, cache: inout ()) {
-        let result = arrange(proposal: proposal, subviews: subviews)
-        for (index, frame) in result.frames.enumerated() {
-            subviews[index].place(at: CGPoint(x: bounds.minX + frame.origin.x, y: bounds.minY + frame.origin.y), proposal: ProposedViewSize(frame.size))
-        }
-    }
-    
-    private func arrange(proposal: ProposedViewSize, subviews: Subviews) -> (size: CGSize, frames: [CGRect]) {
-        let maxWidth = proposal.width ?? .infinity
-        var currentX: CGFloat = 0
-        var currentY: CGFloat = 0
-        var lineHeight: CGFloat = 0
-        var frames: [CGRect] = []
-        
-        for subview in subviews {
-            let size = subview.sizeThatFits(.unspecified)
-            
-            if currentX + size.width > maxWidth && currentX > 0 {
-                currentX = 0
-                currentY += lineHeight + spacing
-                lineHeight = 0
+    var body: some View {
+        VStack(alignment: .leading, spacing: 6) {
+            ForEach(0..<rows.count, id: \.self) { rowIndex in
+                HStack(spacing: 6) {
+                    ForEach(rows[rowIndex], id: \.self) { tag in
+                        Text(tag)
+                            .font(Theme.smallFont())
+                            .foregroundColor(Theme.iceBlue)
+                            .padding(.horizontal, 10)
+                            .padding(.vertical, 5)
+                            .background(
+                                Capsule()
+                                    .stroke(Theme.iceBlue.opacity(0.5), lineWidth: 1)
+                            )
+                    }
+                }
             }
+        }
+    }
+    
+    var rows: [[String]] {
+        var result: [[String]] = [[]]
+        var currentRowWidth: CGFloat = 0
+        let maxWidth: CGFloat = 280
+        
+        for tag in tags {
+            let tagWidth = CGFloat(tag.count * 8 + 28)
             
-            frames.append(CGRect(origin: CGPoint(x: currentX, y: currentY), size: size))
-            currentX += size.width + spacing
-            lineHeight = max(lineHeight, size.height)
+            if currentRowWidth + tagWidth > maxWidth && !result[result.count - 1].isEmpty {
+                result.append([tag])
+                currentRowWidth = tagWidth
+            } else {
+                result[result.count - 1].append(tag)
+                currentRowWidth += tagWidth + 6
+            }
         }
         
-        return (CGSize(width: maxWidth, height: currentY + lineHeight), frames)
+        return result
     }
 }

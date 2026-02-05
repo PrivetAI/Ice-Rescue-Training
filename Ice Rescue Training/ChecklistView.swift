@@ -3,7 +3,7 @@ import SwiftUI
 struct ChecklistView: View {
     @EnvironmentObject var storage: StorageService
     @Binding var selectedTab: AppTab
-    @State private var selectedCategory: EquipmentCategory?
+    @State private var selectedCategory: EquipmentItem.EquipmentCategory?
     
     var filteredItems: [EquipmentItem] {
         if let category = selectedCategory {
@@ -88,7 +88,7 @@ struct ChecklistView: View {
                         selectedCategory = nil
                     }
                     
-                    ForEach(EquipmentCategory.allCases, id: \.self) { category in
+                    ForEach(EquipmentItem.EquipmentCategory.allCases, id: \.self) { category in
                         CategoryPill(title: category.rawValue, isSelected: selectedCategory == category) {
                             selectedCategory = category
                         }
