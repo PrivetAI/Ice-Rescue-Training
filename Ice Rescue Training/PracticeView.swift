@@ -227,7 +227,11 @@ struct ScenarioDetailView: View {
                 }
             }
             .padding()
-            .background(Theme.backgroundDark)
+            .padding(.bottom, 20)
+            .background(
+                Theme.backgroundGradient
+                    .ignoresSafeArea(edges: .bottom)
+            )
         }
         .background(Theme.backgroundGradient.ignoresSafeArea())
     }

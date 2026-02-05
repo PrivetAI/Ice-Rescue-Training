@@ -4,9 +4,14 @@ class StorageService: ObservableObject {
     static let shared = StorageService()
     
     private let progressKey = "userProgress"
+    private let checklistKey = "checkedEquipment"
     
     @Published var progress: UserProgress {
         didSet { saveProgress() }
+    }
+    
+    @Published var checkedEquipment: Set<String> {
+        didSet { saveChecklist() }
     }
     
     private init() {
@@ -16,12 +21,22 @@ class StorageService: ObservableObject {
         } else {
             progress = UserProgress()
         }
+        
+        if let items = UserDefaults.standard.stringArray(forKey: checklistKey) {
+            checkedEquipment = Set(items)
+        } else {
+            checkedEquipment = []
+        }
     }
     
     private func saveProgress() {
         if let encoded = try? JSONEncoder().encode(progress) {
             UserDefaults.standard.set(encoded, forKey: progressKey)
         }
+    }
+    
+    private func saveChecklist() {
+        UserDefaults.standard.set(Array(checkedEquipment), forKey: checklistKey)
     }
     
     func markLessonCompleted(_ lessonId: String) {
@@ -51,4 +66,17 @@ class StorageService: ObservableObject {
     }
     
     func resetProgress() { progress = UserProgress() }
+    
+    // MARK: - Checklist Methods
+    func toggleEquipment(_ itemId: String) {
+        if checkedEquipment.contains(itemId) {
+            checkedEquipment.remove(itemId)
+        } else {
+            checkedEquipment.insert(itemId)
+        }
+    }
+    
+    func resetChecklist() {
+        checkedEquipment = []
+    }
 }

@@ -150,3 +150,36 @@ struct HypothermiaSign: Identifiable {
         case severe = "Severe"
     }
 }
+
+// MARK: - Knowledge Base Model
+struct KnowledgeArticle: Identifiable {
+    let id: String
+    let title: String
+    let content: String
+    let category: KnowledgeCategory
+    let tags: [String]
+    
+    enum KnowledgeCategory: String, CaseIterable {
+        case iceSafety = "Ice Safety"
+        case selfRescue = "Self-Rescue"
+        case helpingOthers = "Helping Others"
+        case equipment = "Equipment"
+        case firstAid = "First Aid"
+    }
+}
+
+// MARK: - Equipment Checklist Model
+struct EquipmentItem: Identifiable {
+    let id: String
+    let name: String
+    let description: String
+    let category: EquipmentCategory
+    let essential: Bool
+    
+    enum EquipmentCategory: String, CaseIterable {
+        case personalSafety = "Personal Safety"
+        case groupEquipment = "Group Equipment"
+        case clothing = "Clothing"
+        case communication = "Communication"
+    }
+}

@@ -226,3 +226,80 @@ struct Triangle: Shape {
         return path
     }
 }
+
+struct SearchIcon: View {
+    var size: CGFloat = 32
+    var color: Color = Theme.iceBlue
+    
+    var body: some View {
+        ZStack {
+            Circle()
+                .stroke(color, lineWidth: size * 0.1)
+                .frame(width: size * 0.6, height: size * 0.6)
+                .offset(x: -size * 0.1, y: -size * 0.1)
+            
+            Rectangle()
+                .fill(color)
+                .frame(width: size * 0.3, height: size * 0.1)
+                .rotationEffect(.degrees(45))
+                .offset(x: size * 0.22, y: size * 0.22)
+        }
+        .frame(width: size, height: size)
+    }
+}
+
+struct ClipboardIcon: View {
+    var size: CGFloat = 32
+    var color: Color = Theme.iceBlue
+    
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: size * 0.1)
+                .fill(color)
+                .frame(width: size * 0.7, height: size * 0.9)
+            
+            RoundedRectangle(cornerRadius: size * 0.05)
+                .fill(color.opacity(0.8))
+                .frame(width: size * 0.35, height: size * 0.12)
+                .offset(y: -size * 0.42)
+            
+            VStack(spacing: size * 0.1) {
+                ForEach(0..<3, id: \.self) { _ in
+                    HStack(spacing: size * 0.06) {
+                        RoundedRectangle(cornerRadius: 2)
+                            .stroke(Color.white, lineWidth: size * 0.04)
+                            .frame(width: size * 0.12, height: size * 0.12)
+                        Rectangle()
+                            .fill(Color.white.opacity(0.7))
+                            .frame(width: size * 0.28, height: size * 0.06)
+                    }
+                }
+            }
+            .offset(y: size * 0.08)
+        }
+        .frame(width: size, height: size)
+    }
+}
+
+struct LibraryIcon: View {
+    var size: CGFloat = 32
+    var color: Color = Theme.iceBlue
+    
+    var body: some View {
+        HStack(spacing: size * 0.06) {
+            RoundedRectangle(cornerRadius: 2)
+                .fill(color)
+                .frame(width: size * 0.18, height: size * 0.85)
+            RoundedRectangle(cornerRadius: 2)
+                .fill(color.opacity(0.8))
+                .frame(width: size * 0.18, height: size * 0.7)
+            RoundedRectangle(cornerRadius: 2)
+                .fill(color.opacity(0.6))
+                .frame(width: size * 0.18, height: size * 0.9)
+            RoundedRectangle(cornerRadius: 2)
+                .fill(color.opacity(0.9))
+                .frame(width: size * 0.18, height: size * 0.6)
+        }
+        .frame(width: size, height: size, alignment: .bottom)
+    }
+}

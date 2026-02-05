@@ -8,6 +8,8 @@ enum AppTab {
     case emergency
     case settings
     case progress
+    case knowledge
+    case checklist
 }
 
 struct ContentView: View {
@@ -30,6 +32,10 @@ struct ContentView: View {
                 SettingsView(selectedTab: $selectedTab)
             case .progress:
                 MyProgressView(selectedTab: $selectedTab)
+            case .knowledge:
+                KnowledgeView(selectedTab: $selectedTab)
+            case .checklist:
+                ChecklistView(selectedTab: $selectedTab)
             }
         }
         .animation(.easeInOut(duration: 0.2), value: selectedTab)

@@ -82,6 +82,24 @@ struct HomeView: View {
                     ) {
                         selectedTab = .emergency
                     }
+                    
+                    MenuButton(
+                        title: "Knowledge Base",
+                        subtitle: "Safety information & guides",
+                        icon: AnyView(LibraryIcon(size: 40, color: Theme.iceBlueLight)),
+                        color: Theme.iceBlueLight
+                    ) {
+                        selectedTab = .knowledge
+                    }
+                    
+                    MenuButton(
+                        title: "Equipment Checklist",
+                        subtitle: "Prepare for ice safety",
+                        icon: AnyView(ClipboardIcon(size: 40, color: Theme.successGreen)),
+                        color: Theme.successGreen
+                    ) {
+                        selectedTab = .checklist
+                    }
                 }
                 .padding(.horizontal)
                 

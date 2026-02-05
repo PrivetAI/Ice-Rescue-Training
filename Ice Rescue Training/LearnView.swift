@@ -187,7 +187,11 @@ struct LessonDetailView: View {
                 .buttonStyle(PrimaryButtonStyle(color: isLastStep ? Theme.successGreen : Theme.iceBlue))
             }
             .padding()
-            .background(Theme.backgroundDark)
+            .padding(.bottom, 20)
+            .background(
+                Theme.backgroundGradient
+                    .ignoresSafeArea(edges: .bottom)
+            )
         }
         .background(Theme.backgroundGradient.ignoresSafeArea())
     }

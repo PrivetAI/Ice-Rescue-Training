@@ -429,4 +429,143 @@ struct ContentData {
         HypothermiaSign(id: "h2", stage: "Moderate", signs: ["Violent shivering or shivering stops", "Extreme confusion", "Drowsiness", "Weak pulse"], temperature: "82-90°F (28-32°C)", severity: .moderate),
         HypothermiaSign(id: "h3", stage: "Severe", signs: ["No shivering", "Unconsciousness", "Shallow breathing", "Weak or no pulse"], temperature: "Below 82°F (28°C)", severity: .severe)
     ]
+    
+    // MARK: - Knowledge Articles
+    static let knowledgeArticles: [KnowledgeArticle] = [
+        // Ice Safety
+        KnowledgeArticle(
+            id: "ka1",
+            title: "Ice Thickness Guide",
+            content: "Ice thickness is measured in inches of clear, solid ice. For safe activities: 4 inches for walking and ice fishing, 5-6 inches for snowmobiles, 8-12 inches for cars and small trucks. Always measure in multiple locations as thickness varies across the same body of water. Use an ice chisel or auger to check - never rely on visual inspection alone.",
+            category: .iceSafety,
+            tags: ["thickness", "measurement", "safety"]
+        ),
+        KnowledgeArticle(
+            id: "ka2",
+            title: "Ice Color Meanings",
+            content: "Clear blue ice is the strongest and safest. White opaque ice has air pockets and is about half as strong as clear ice. Gray ice indicates the presence of water and is extremely dangerous - never walk on gray ice. Snow-covered ice hides the true condition and insulates it from cold, preventing proper freezing.",
+            category: .iceSafety,
+            tags: ["color", "visual", "identification"]
+        ),
+        KnowledgeArticle(
+            id: "ka3",
+            title: "Dangerous Ice Locations",
+            content: "Certain areas are always more dangerous: near inlets and outlets where currents flow, around bridges and docks, near springs or underwater vegetation, in areas with recent temperature changes. Rivers and streams have inconsistent ice due to currents. Lakes near the shore may be thin due to sun reflection and temperature changes.",
+            category: .iceSafety,
+            tags: ["locations", "danger zones", "currents"]
+        ),
+        
+        // Self-Rescue
+        KnowledgeArticle(
+            id: "ka4",
+            title: "Cold Shock Response",
+            content: "When you enter cold water, your body experiences cold shock for 1-3 minutes. Symptoms include gasping, hyperventilation, and panic. Focus on controlling your breathing - slow, deep breaths. Do not try to swim during this phase. Keep your head above water and hold onto the ice edge. Once breathing is controlled, you can begin self-rescue.",
+            category: .selfRescue,
+            tags: ["cold shock", "breathing", "immediate response"]
+        ),
+        KnowledgeArticle(
+            id: "ka5",
+            title: "Self-Rescue Technique",
+            content: "After controlling breathing: 1) Turn toward the direction you came from. 2) Extend arms wide on the ice surface. 3) Kick legs like swimming while pulling forward. 4) Get your body horizontal on the ice. 5) Once on ice, do NOT stand - roll away from the hole. 6) Continue rolling until you reach solid ice, then crawl to safety.",
+            category: .selfRescue,
+            tags: ["technique", "steps", "escape"]
+        ),
+        KnowledgeArticle(
+            id: "ka6",
+            title: "Swimming Failure",
+            content: "After 10-15 minutes in cold water, you may experience swimming failure. Muscles lose function, making it impossible to swim or grip. This is why quick action in the first few minutes is critical. If you cannot escape, focus on keeping your airway above water and conserving energy until help arrives.",
+            category: .selfRescue,
+            tags: ["swimming", "muscle failure", "time"]
+        ),
+        
+        // Helping Others
+        KnowledgeArticle(
+            id: "ka7",
+            title: "Reach-Throw-Go Method",
+            content: "Priority order for rescue: REACH - extend a pole, branch, or clothing from solid ground. THROW - throw a rope, life ring, or floating object. GO - only as a last resort, and only with proper equipment. Never enter the water yourself. Always call emergency services first.",
+            category: .helpingOthers,
+            tags: ["rescue method", "priority", "technique"]
+        ),
+        KnowledgeArticle(
+            id: "ka8",
+            title: "Ice Rescue Safety",
+            content: "If you must go onto ice for rescue: lie flat to distribute weight, use a ladder or board if available, have someone hold your feet or a rope tied around you, approach the victim from the side where ice was strongest, push a flotation device to them rather than grabbing directly.",
+            category: .helpingOthers,
+            tags: ["on-ice rescue", "safety", "technique"]
+        ),
+        
+        // Equipment
+        KnowledgeArticle(
+            id: "ka9",
+            title: "Ice Picks (Ice Claws)",
+            content: "Ice picks are worn around the neck on a cord. They have sharp metal points that grip ice, allowing you to pull yourself out of water. Use them by jamming into the ice and pulling your body forward. Essential for anyone on ice - they can save your life in seconds.",
+            category: .equipment,
+            tags: ["ice picks", "self-rescue", "essential"]
+        ),
+        KnowledgeArticle(
+            id: "ka10",
+            title: "Flotation Suits",
+            content: "Flotation suits provide buoyancy and thermal protection. They keep your head above water automatically and slow heat loss. Required by law for snowmobiling on ice in many jurisdictions. Choose suits rated for the expected water temperature.",
+            category: .equipment,
+            tags: ["flotation", "clothing", "buoyancy"]
+        ),
+        KnowledgeArticle(
+            id: "ka11",
+            title: "Throw Rope Bag",
+            content: "A throw bag contains 50-100 feet of floating rope in a throwable bag. Practice throwing before you need it. Aim past the victim so the rope lands across them. Keep accessible at all times on the ice. Replace after use as wet rope may freeze.",
+            category: .equipment,
+            tags: ["rope", "rescue", "throwing"]
+        ),
+        
+        // First Aid
+        KnowledgeArticle(
+            id: "ka12",
+            title: "Hypothermia Recognition",
+            content: "Mild: shivering, confusion, slurred speech (90-95°F). Moderate: violent shivering then stops, extreme confusion, drowsiness (82-90°F). Severe: no shivering, unconsciousness, shallow breathing, weak pulse (below 82°F). Any cold water immersion victim should be treated for hypothermia.",
+            category: .firstAid,
+            tags: ["hypothermia", "symptoms", "recognition"]
+        ),
+        KnowledgeArticle(
+            id: "ka13",
+            title: "Hypothermia Treatment",
+            content: "Move to shelter, remove wet clothing, wrap in dry blankets. Warm the CORE first - apply warm compresses to neck, armpits, and groin. Give warm sweet drinks if conscious. Do NOT: rub limbs (can cause cardiac arrest), give alcohol, apply direct heat to arms/legs, place in hot bath.",
+            category: .firstAid,
+            tags: ["hypothermia", "treatment", "warming"]
+        ),
+        KnowledgeArticle(
+            id: "ka14",
+            title: "After-Drop Phenomenon",
+            content: "After-drop occurs when cold blood from extremities returns to the core during rewarming, causing core temperature to drop further. This is why we warm the core first. Handle hypothermia victims gently - rough handling can trigger cardiac arrhythmias. Keep them horizontal and avoid rapid movements.",
+            category: .firstAid,
+            tags: ["after-drop", "rewarming", "cardiac"]
+        )
+    ]
+    
+    // MARK: - Equipment Items
+    static let equipmentItems: [EquipmentItem] = [
+        // Personal Safety
+        EquipmentItem(id: "eq1", name: "Ice Picks", description: "Worn around neck for self-rescue from ice water", category: .personalSafety, essential: true),
+        EquipmentItem(id: "eq2", name: "Flotation Suit/Vest", description: "Provides buoyancy and thermal protection", category: .personalSafety, essential: true),
+        EquipmentItem(id: "eq3", name: "Whistle", description: "Signal device when shouting is impossible", category: .personalSafety, essential: true),
+        EquipmentItem(id: "eq4", name: "Ice Cleats", description: "Traction devices for walking on ice", category: .personalSafety, essential: false),
+        
+        // Group Equipment
+        EquipmentItem(id: "eq5", name: "Throw Rope Bag", description: "50-100 feet of floating rescue rope", category: .groupEquipment, essential: true),
+        EquipmentItem(id: "eq6", name: "Ice Chisel/Spud Bar", description: "For testing ice thickness", category: .groupEquipment, essential: true),
+        EquipmentItem(id: "eq7", name: "Rescue Sled", description: "For approaching victims while distributing weight", category: .groupEquipment, essential: false),
+        EquipmentItem(id: "eq8", name: "First Aid Kit", description: "For treating injuries and hypothermia", category: .groupEquipment, essential: true),
+        
+        // Clothing
+        EquipmentItem(id: "eq9", name: "Layered Clothing", description: "Multiple layers for insulation", category: .clothing, essential: true),
+        EquipmentItem(id: "eq10", name: "Waterproof Outer Layer", description: "Protection from wind and moisture", category: .clothing, essential: true),
+        EquipmentItem(id: "eq11", name: "Spare Dry Clothes", description: "In waterproof bag for emergencies", category: .clothing, essential: true),
+        EquipmentItem(id: "eq12", name: "Insulated Boots", description: "Waterproof boots with good insulation", category: .clothing, essential: true),
+        EquipmentItem(id: "eq13", name: "Gloves/Mittens", description: "Insulated and waterproof hand protection", category: .clothing, essential: true),
+        EquipmentItem(id: "eq14", name: "Hat/Balaclava", description: "Head protection prevents heat loss", category: .clothing, essential: true),
+        
+        // Communication
+        EquipmentItem(id: "eq15", name: "Charged Phone", description: "In waterproof case for emergencies", category: .communication, essential: true),
+        EquipmentItem(id: "eq16", name: "Trip Plan", description: "Left with someone not on the trip", category: .communication, essential: true),
+        EquipmentItem(id: "eq17", name: "Two-Way Radio", description: "For group communication", category: .communication, essential: false)
+    ]
 }
